@@ -102,7 +102,42 @@
 # except ValueError:
 #     print('Entrada inválida. Por favor, digite um número inteiro.')
 
-# 
+# #4 - Código de Origem do Produto.
+
+# try:
+
+#     codigo= int(input('Digite o código de origem do produto: '))
+
+#     match codigo:
+#         case 1:
+#             print('Sul')
+#         case 2:
+#             print('Norte')
+#         case 3:
+#             print('Leste')
+#         case 4:
+#             print('Oeste')
+#         case 5:
+#             print('Nordeste')
+#         case 6:
+#             print('Nordeste')
+#         case 7:
+#             print('Sudeste')
+#         case 8:
+#             print('Sudeste')
+#         case 9:
+#             print('Sudeste')
+#         case 10:
+#             print('Centro-Oeste')
+#         case 11:
+#             print('Noroeste')
+        
+#         case _:
+#             print('Importado')
+
+# except ValueError:
+#     print('Entrada invalida, Por favor digite um número')        
+
 # #1 - Cálculo de Lâmpadas.
 
 # potencia_lampada= float(input("Potência de cada lâmpada (em watts): "))
@@ -115,4 +150,4 @@
 # qtd_lampadas= potencia_necessaria / potencia_lampada
 
 # print(f"Número de lâmpadas necessárias: {qtd_lampadas} unidade(s)")
-# #!!! Número de bocais é irrelevante pro cálculo !!!
+# #!!! Número de bocais é irrelevante pro cáuculo!!!
