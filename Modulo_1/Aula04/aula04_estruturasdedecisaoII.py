@@ -52,7 +52,7 @@
 # except ValueError:
 #     print('Erro informe valor adequado')
 
-# #2 - Quantidade de Caixas de Azulejos.
+# #2 - Quantidade de Caixas de Azulejos. *** Corrigir com o exemplo do professor ***
 # p1=float(input('Parede em metros² 1: '))
 # p2=float(input('Parede em metros² 2: '))
 # p3=float(input('Parede em metros² 3: '))
@@ -64,7 +64,7 @@
 # resultado=ps/(cx*pecas)
 # print(f'Quantidades de cxs necessárias: {resultado}')
 
-# #3 - Rendimento do Taxista:
+# #3 - Rendimento do Taxista:*** Corrigir com o exemplo do professor ***
 # incio=int(input('Informe o número de km no início do dia: '))
 # final=int(input('Informe o número de km no final do dia: '))
 # valortotal=float(input('Informe o valor total R$ recebido dos passageiros: '))
@@ -75,9 +75,10 @@
 # combustivel= consumo/kml #litros de combustível gastos.
 # ll= valortotal-(combustivel*valor)
 # print(f'Lucro líquido: {ll}')
-# ## !!!tirar dúvida com o Douglas: Não entendi 'a média de consumo em km/L'!!!.
+# # !!!tirar dúvida com o Douglas: Não entendi 'a média de consumo em km/L'!!!.
 
-# #5 - Média do Aluno com Optativa.
+# #5 - Média do Aluno com Optativa. *** Corrigir com o exemplo do professor ***
+
 # nota1=float(input('Nota da primeira avaliação: '))
 # nota2=float(input('Nota da segunda avaliação: '))
 # optativa=float(input('Nota da avaliação optativa (caso não tenha feito forneça o valor -1): '))
@@ -95,7 +96,7 @@
 
 #     if media >= 6:
 #         print('Aprovado')
-#     elif meidia < 3:
+#     elif media < 3:
 #         print('Reprovado')
 #     else:
 #         print('Recuperação')
@@ -117,16 +118,16 @@
 #             print('Leste')
 #         case 4:
 #             print('Oeste')
-#         case 5:
+#         case 5 | 6:
 #             print('Nordeste')
-#         case 6:
-#             print('Nordeste')
-#         case 7:
+#         # case 6:
+#         #     print('Nordeste')
+#         case codigo if 7 <= codigo <= 9:
 #             print('Sudeste')
-#         case 8:
-#             print('Sudeste')
-#         case 9:
-#             print('Sudeste')
+#         # case 8:
+#         #     print('Sudeste')
+#         # case 9:
+#         #     print('Sudeste')
 #         case 10:
 #             print('Centro-Oeste')
 #         case 11:
@@ -138,7 +139,7 @@
 # except ValueError:
 #     print('Entrada invalida, Por favor digite um número')        
 
-# #1 - Cálculo de Lâmpadas.
+# #1 - Cálculo de Lâmpadas. *** Corrigir com o exemplo do professor ***
 
 # potencia_lampada= float(input("Potência de cada lâmpada (em watts): "))
 # largura= float(input("Largura do cômodo (em metros): "))
