@@ -60,35 +60,35 @@
 
 # *** Atividades ***
 
-# # 1. Cálculo de Média Escolar para Vários Alunos.
-# for i in range(10):
-#     try:
-#         print(f'Número da chamada:{i+1} de 10')
-#         n1=float(input('Nota Avaliação 01: '))
-#         n2=float(input('Nota Avaliação 02: '))
-#         optativa= float(input('Nota optativa, (digite -1 se não fez): '))
+# 1. Cálculo de Média Escolar para Vários Alunos.
+for i in range(10):
+    try:
+        print(f'Número da chamada:{i+1} de 10')
+        n1=float(input('Nota Avaliação 01: '))
+        n2=float(input('Nota Avaliação 02: '))
+        optativa= float(input('Nota optativa, (digite -1 se não fez): '))
 
-#         nota_final_1 = n1
-#         nota_final_2 = n2
+        nota_final_1 = n1
+        nota_final_2 = n2
 
-#         if optativa != -1:
-#             menor= min(nota_final_1, nota_final_2)
-#             maior= max(nota_final_1, nota_final_2)
-#             media= (optativa+maior)/2
-#         else:
-#             media= (nota_final_1+nota_final_2)/2
-#             print(f'Média final:{media:2f}')
+        if optativa != -1:
+            menor= min(nota_final_1, nota_final_2)
+            maior= max(nota_final_1, nota_final_2)
+            media= (optativa+maior)/2
+        else:
+            media= (nota_final_1+nota_final_2)/2
+            print(f'Média final:{media:2f}')
 
-#         if media >= 6:
-#             print('Aprovado')
-#         elif media < 3:
-#             print('Reprovado')
-#         else:
-#             print('Recuperação')
-#     except ValueError:
-#         print('Entrada inválida. Por favor, digite um número.')
+        if media >= 6:
+            print('Aprovado')
+        elif media < 3:
+            print('Reprovado')
+        else:
+            print('Recuperação')
+    except ValueError:
+        print('Entrada inválida. Por favor, digite um número.')
 
-# 2. Cadastro de Candidatos.
+# # 2. Cadastro de Candidatos.
 # from datetime import date
 # ano_atual= date.today().year
 
