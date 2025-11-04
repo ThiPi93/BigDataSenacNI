@@ -1,6 +1,7 @@
 #***Listas***
 # CRIANDO UMA LISTA
-frutas = ['Maçã', 'Banana', 'Morango', 'Maçã', 'Pera']
+frutas = ['Maçã',
+ 'Banana', 'Morango', 'Maçã', 'Pera']
 print(f"Lista Original: {frutas}")
 # 1. ACESSO (Sempre por índice, começando em 0)
 primeira_fruta = frutas[0]

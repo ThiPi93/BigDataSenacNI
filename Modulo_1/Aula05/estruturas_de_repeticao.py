@@ -60,81 +60,90 @@
 
 # *** Atividades ***
 
-# 1. Cálculo de Média Escolar para Vários Alunos.
-for i in range(10):
-    try:
-        print(f'Número da chamada:{i+1} de 10')
-        n1=float(input('Nota Avaliação 01: '))
-        n2=float(input('Nota Avaliação 02: '))
-        optativa= float(input('Nota optativa, (digite -1 se não fez): '))
+# # 1. Cálculo de Média Escolar para Vários Alunos.
+# for i in range(10):
+#     try:
+#         print(f'Número da chamada:{i+1} de 10')
+#         n1=float(input('Nota Avaliação 01: '))
+#         n2=float(input('Nota Avaliação 02: '))
+#         optativa= float(input('Nota optativa, (digite -1 se não fez): '))
 
-        nota_final_1 = n1
-        nota_final_2 = n2
+#         nota_final_1 = n1
+#         nota_final_2 = n2
 
-        if optativa != -1:
-            menor= min(nota_final_1, nota_final_2)
-            maior= max(nota_final_1, nota_final_2)
-            media= (optativa+maior)/2
-        else:
-            media= (nota_final_1+nota_final_2)/2
-            print(f'Média final:{media:2f}')
+#         if optativa != -1:
+#             menor= min(nota_final_1, nota_final_2)
+#             maior= max(nota_final_1, nota_final_2)
+#             media= (optativa+maior)/2
+#         else:
+#             media= (nota_final_1+nota_final_2)/2
+#             print(f'Média final:{media:.2f}')
 
-        if media >= 6:
-            print('Aprovado')
-        elif media < 3:
-            print('Reprovado')
-        else:
-            print('Recuperação')
-    except ValueError:
-        print('Entrada inválida. Por favor, digite um número.')
+#         if media >= 6:
+#             print('Aprovado')
+#         elif media < 3:
+#             print('Reprovado')
+#         else:
+#             print('Recuperação')
+#     except ValueError:
+#         print('Entrada inválida. Por favor, digite um número.')
 
-# # 2. Cadastro de Candidatos.
+# 2. Cadastro de Candidatos.
 # from datetime import date
 # ano_atual= date.today().year
 
-# for i in range (12):
+# for i in range (3):
+#     contador_canditos:3
 #     try:
 #         print(f'Número do Candidato: {i+1} de 12')
 #         nome= str(input('Insira o seu nome completo: '))
 #         ano_nascimento= int(input('Insira o ano de nascimento: '))
 #         idade= ano_atual-ano_nascimento
+
 #         if idade < 18:
 #             print(f'{nome} tem {idade} anos e não pode participar.')
 #             continue
-            
-#         telefone = input("Telefone: ")
-#         email = input("E-mail: ")
+#         elif idade >=18:          
+#             telefone = input("Telefone: ")
+#             email = input("E-mail: ")
+#             contador_canditos-=1
+#             print('-'*90)
+#             print(f'Obrigado por se inscrever! Dados da sua candidatura:\n{telfeno}')
+#         else:
+#             print('Favor informe um ano de nascimento válido.')
 
 #         print(f'{nome} tem {idade} pode participar.')
             
 #     except ValueError:
 #         print('Entrada inválida. Por favor, digite novamente.')
+#     except SyntaxError:
+#         print('ERRO dados válidos.')
+        
+# 3. Tentativa de Login e Senha.
+contador = 0
+limite = 3
 
-# # 3. Tentativa de Login e Senha.
-# contador = 0
-# limite = 3
+usuario_correto = 'Thiago'
+senha_correta = '123'
 
-# usuario_correto = 'Thiago'
-# senha_correta = '123'
+while contador < limite:
+    try:
+        print(f"Tentativa {contador+1} de {limite}:")
+        u= str(input("Login: "))
+        s= str(input('Senha: '))
+        usuario = u
+        senha = s
 
-# while contador < limite:
-#     try:
-#         print(f"Tentativa {contador+1} de {limite}:")
-#         u= str(input("Login: "))
-#         s= str(input('Senha: '))
-#         usuario = u
-#         senha = s
+        if usuario == usuario_correto and senha == senha_correta: #modificar esse if mais tarde para que seja coerente com a pergunta.
+            print('Acesso autorizado. Bem-vindo.')
+            break
+        else:
+            contador += 1
+            tentativas_restantes= limite - contador
 
-#         if usuario == usuario_correto and senha == senha_correta: #modificar esse if mais tarde para que seja coerente com a pergunta.
-#             print('Acesso autorizado. Bem-vindo.')
-#             break
-#         else:
-#             contador += 1
-#             tentativas_restantes= limite - contador
-
-#             if tentativas_restantes > 0:
-#                 print(f'Senha incorreta. Você ainda tem {tentativas_restantes} tentativa(s).')
-#             else:
-#                 print('Tentativas esgotadas. Acesso bloqueado.')
-#     except ValueError:
-#         print("Entrada inválida. Por favor, digite novamente.")
+            if tentativas_restantes > 0:
+                print(f'Senha incorreta. Você ainda tem {tentativas_restantes} tentativa(s).')
+            else:
+                print('Tentativas esgotadas. Acesso bloqueado.')
+    except ValueError:
+        print("Entrada inválida. Por favor, digite novamente.")
