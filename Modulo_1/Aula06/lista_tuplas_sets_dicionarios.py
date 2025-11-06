@@ -98,8 +98,80 @@
 # print(f"SET (Apenas Únicos): {set_filmes}")
 # print(f"DICIONÁRIO (Chave: Valor): {dicionario_filmes}")
 
-lista01=['Suane', 30, 30.4, True, None, 'Maria'{1, 2, 3}, {'nome': 'João'}{}]
-print(lista01)
-print(type(lista01))
-print(lista01[6])
-print(type(lista01[3]))
+# lista01=['Suane', 30, 30.4, True, None, 'Maria'{1, 2, 3}, {'nome': 'João'}{}]
+# print(lista01)
+# print(type(lista01))
+# print(lista01[6])
+# print(type(lista01[3]))
+### Aula 07 - 05/11/2025 #####
+# **** LISTAS *****
+# lista02_nopets= [
+#     'Lavar louça',
+#     'Ir ao Mercado',
+#     'Lavar o banheiro',
+#     'Tirar o pó',
+#     'Lavar o quintal']
+# #replace, strip, inser, remove.Outras formas de editar uma lista.
+# lista02_pets=lista02_nopets.copy()
+# lista02_pets.append('Limpar areia dos gatos')
+# lista02_pets.append('Dar banho no cachorro')# append sempre add no final da lista.
+
+# lista02_pets.insert(5,'Ir ao Veterinário')#Insere o elmento no indice indicado.
+# print(lista02_pets)
+# print('*'*90)
+# lista02_pets.remove('Ir ao Veterinário')
+# print(lista02_pets)
+
+# print(lista02_pets, lista02_nopets)
+# lista02.pop()# pop remove o último elemento da lista.
+# print(lista02)
+# print(lista02[2])# Se quiser imprimir só um elemnto dentro da lista.
+# print(lista02[1][6:13])
+# print(lista02[1][6:])
+# print(lista02[1][6:],lista02[4][6:])
+
+### TUPLAS ####
+# pares=(40,20,2,18,14,34,96,30,20,58)
+# print(type(pares))
+# print(pares[3])    
+# print(pares[3:])
+# print(pares[3:8])
+# print(len(pares))
+# pares=pares+(44,)
+# print(pares)
+# lista_pares=list(pares)
+# print(lista_pares)
+# lista_pares.append(102)
+# lista_pares.sort()
+# print(lista_pares)
+
+# # *** SETs *** - Não trabalha com o indice.
+# impares={33,5,17,11,27,11,71,79,99,15}
+# print(impares)
+# print(type(impares))
+# impares_02={11,3,23,83,15,73}
+# intersecao=impares.intersection(impares_02)
+# print(intersecao)
+
+# *** DICIONÁRIOS ***
+
+filme={
+   'nome':'V for Vendetta',
+   'ano': 2005,
+   'gênero':'Ação',
+   'faixa_etária': 16
+}
+print(filme)
+print(type(filme))
+
+print(filme.keys())
+print(filme.values())
+print(len(filme))
+
+filme['duracao']= '130min'
+filme['gênero']= 'Thriller/Drama'
+filme['gênero']='Thriller/Drama/Ação'
+print(filme)
+
+# filme.pop('duracao')
+# print(filme)
