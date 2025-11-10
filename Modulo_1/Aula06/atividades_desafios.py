@@ -18,7 +18,7 @@
 #             status = "Recuperação"
 #         else:
 #             status = "Reprovado"
-        resultado.append(f'\nAluno {i + 1}: {status}')
+        # resultado.append(f'\nAluno {i + 1}: {status}')
 #         print(f"Média: {media:.2f} - Status: {status}")
         
 #     except ValueError:
