@@ -10,7 +10,7 @@ if media > corte:
     print('Aprovado')
 elif media >= 5 and media <= 7:
     print('Recuperação')
-elif meida < 5:
+elif media < 5:
     print('Reprovado')
 else:
     print('Informe um valor adequado')
