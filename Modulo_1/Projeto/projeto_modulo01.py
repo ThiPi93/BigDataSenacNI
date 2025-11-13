@@ -34,8 +34,6 @@ garcons = [
 # ==== Lista de pedidos ===
 pedidos_realizados = [] #Lista para armazenar os pedidos feitos pelos clientes.
 
-# === N° dos pedidos ===
-contador_de_pedidos = 1000
 
 # === Funções ===
 def boas_vindas():
@@ -49,7 +47,8 @@ def boas_vindas():
         try:
             mesa = int(input("Digite o número da mesa desejada: "))
             if mesa in mesas_disponiveis:
-                return mesa  # ✅ retorna apenas quando for válido
+                mesas_disponiveis.remove(mesa)
+                return mesa 
             else:
                 print("❌ Mesa não disponível. Escolha um número entre 1 e 20.")
         except ValueError:
@@ -215,12 +214,24 @@ def nota_fiscal(numero_pedido, mesa, garcom, itens, total, forma_pagamento):
     print("Obrigada pela preferência! Volte sempre! 🍱".center(80))
     print("=" * 80)
 
+    pedido_completo = {
+        "numero": numero_pedido,
+        "mesa": mesa,
+        "garcom": garcom,
+        "itens": itens,
+        "total": total,
+        "forma_pagamento": forma_pagamento,
+        "status": "Pago"
+    }
+    pedidos_realizados.append(pedido_completo)
+    print(f"\n✅ Pedido #{numero_pedido} registrado no sistema!")
+
 
 
 # === Código Principal ===
 mesa_cliente = boas_vindas()
 garcom_responsavel = definir_garcom(mesa_cliente)
-contador_de_pedidos += 1
+numero_pedido = random.randint(1000, 9999)
 
 print(f"Mesa {mesa_cliente} selecionada com sucesso.")
 print("=" * 80)
@@ -229,6 +240,6 @@ print("=" * 80)
 mostrar_cardapio()
 
 # 🔹 Chamada da função com mesa, garçom e número do pedido
-itens_pedido, total_pedido = selecionar_produtos(mesa_cliente, garcom_responsavel, contador_de_pedidos)
+itens_pedido, total_pedido = selecionar_produtos(mesa_cliente, garcom_responsavel, numero_pedido)
 
 
