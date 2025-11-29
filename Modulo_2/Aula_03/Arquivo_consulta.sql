@@ -26,11 +26,17 @@ CREATE TABLE clientes (
 
 CREATE TABLE pedidos ( 
     id_pedido INT PRIMARY KEY, 
+	id_cliente INT,
     data_pedido DATE, 
-    valor_total DECIMAL(10, 2), 
-    id_cliente INT, 
+    valor_total DECIMAL(10, 2),  
     id_produto INT, 
-    quantidade INT, 
-    FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente), 
-    FOREIGN KEY (id_produto) REFERENCES produtos(id_produto) 
+    quantidade INT
 ); 
+
+ALTER TABLE pedidos 
+ADD CONSTRAINT fk_pedidos_clientes 
+FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente);
+
+ALTER TABLE pedidos 
+ADD CONSTRAINT fk_pedidos_produtos 
+FOREIGN KEY (id_produto) REFERENCES produtos(id_produto);
