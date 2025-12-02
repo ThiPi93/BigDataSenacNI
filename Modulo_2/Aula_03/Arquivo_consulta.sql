@@ -40,3 +40,10 @@ FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente);
 ALTER TABLE pedidos 
 ADD CONSTRAINT fk_pedidos_produtos 
 FOREIGN KEY (id_produto) REFERENCES produtos(id_produto);
+
+
+-- Aula05 --
+
+SELECT c.nome, p.data_pedido
+FROM clientes c
+JOIN pedidos p ON c.id_cliente = p.id_cliente
