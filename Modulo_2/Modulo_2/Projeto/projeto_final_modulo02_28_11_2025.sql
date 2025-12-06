@@ -1,1 +1,0 @@
-SELECT * FROM projeto_final_modulo02.dados_projeto;
