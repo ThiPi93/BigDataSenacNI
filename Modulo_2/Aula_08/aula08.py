@@ -71,7 +71,7 @@ print("-" * 100)
 ###################################################################
 
 # Carregar o DataFrame
-pedidos_df = pd.read_csv("BigDataSenacNI\Modulo_2\Aula_04\vendas_pedidos.csv")
+pedidos_df = pd.read_csv("C:\Users\felix.thiago\Documents\BigDataSenacNI\Modulo_2\Aula_04\vendas_pedidos.csv")
 
 # Selecionar os dados de interesse
 dados_valor_total = pedidos_df['valor_total']

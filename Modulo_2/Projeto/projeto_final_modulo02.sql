@@ -17,20 +17,13 @@ genre VARCHAR(100),
 content_rating VARCHAR(100),
 directors VARCHAR(100),
 actors VARCHAR(100),
-tomatometer_status VARCHAR(100),
-tomatometer_rating DECIMAL(5, 2),
-audience_status VARCHAR(100),
-audience_rating DECIMAL(5, 2)
+
 );
 
 SET GLOBAL local_infile = 1;
-LOAD DATA LOCAL INFILE 'C:/Users/thiag/OneDrive/Documentos/Senac - Analista de dados/BigDataSenacNI/Modulo_2/Projeto/oscars_df.csv'
+LOAD DATA LOCAL INFILE 'C:/Users/felix.thiago/Documents/BigDataSenacNI/Modulo_2/Projeto/imdb_projeto'
 INTO TABLE dados_projeto
-FIELDS TERMINATED BY ','
+FIELDS TERMINATED BY ';'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS 
 SET imdb_votes = REPLACE(@imdb_votes, ',', '');
-
-
-
-
